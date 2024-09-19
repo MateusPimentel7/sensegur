@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Confidencialidade Hospitalar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Controle de Acesso Hospitalar</h1>
+        <div class="login-form">
+            <h2>Acesso ao Sistema</h2>
+            <input type="text" id="usuario" placeholder="Usuário" required>
+            <input type="password" id="senha" placeholder="Senha" required>
+            <button onclick="login()">Entrar</button>
+            <p id="error-message"></p>
+        </div>
+
+        <div id="main-content" style="display: none;">
+            <h2>Bem-vindo ao Sistema de Prontuários</h2>
+            <button onclick="viewPatientRecord()">Acessar Prontuário do Paciente VIP</button>
+            <div id="alert" style="display: none;" class="alert">Atenção: Você está acessando informações confidenciais!</div>
+
+            <div id="audit-log">
+                <h3>Auditoria de Acessos</h3>
+                <ul id="log-list">
+                    <!-- Logs de acessos serão adicionados aqui -->
+                </ul>
+            </div>
+            <button onclick="logout()">Sair</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
